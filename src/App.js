@@ -1,17 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import "./App.css";
+import { Routes, Switch, Route, Link } from "react-router-dom";
+import MyNavbar from "./Components/MyNavbar";
+import Footer from "../src/Components/Footer";
+import Home from "../src/Pages/Home";
+import About from "../src/Pages/About";
+import Forum from "./Pages/Forum";
+import Products from "../src/Pages/Products";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Gary's List
-        </p>
-      </header>
-    </div>
+    <>
+    <MyNavbar />
+    <Routes>
+      {/* <Route path="/" element={<Home />} />
+      <Route path="login" element={<Login />} />
+      <Route path="lineup" element={<Products />} />
+      <Route path="standings" element={<Forum />} />
+      <Route path="history" element={<About />} /> */}
+    </Routes>
+    "Insert Something Here"
+    <Footer />
+  </>
   );
 }
-
 export default App;
