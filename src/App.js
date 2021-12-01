@@ -7,20 +7,21 @@ import About from "../src/Pages/About";
 import Forum from "./Pages/Forum";
 import Products from "../src/Pages/Products";
 import Cart from "../src/Pages/Cart";
+import Login from "../src/Pages/Login";
 
 function App() {
   return (
     <>
     <MyNavbar />
     <Routes>
-      {/* <Route path="/" element={<Home />} />
-      <Route path="login" element={<Login />} />
-      <Route path="products" element={<Products />} />
-      <Route path="fourm" element={<Forum />} />
-      <Route path="about" element={<About />} /> 
-      <Route path="cart" element={<Cart />} /> */}
+       <Route path="/*" element={<Home />} />
+     {/* <Route path="/login" element={<Login />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/fourm" element={<Forum />} />
+      <Route path="/about" element={<About />} /> 
+      <Route path="/cart" element={<Cart />} /> */}
     </Routes>
-    "Insert Something Here"
+    
     <Footer />
   </>
   );
