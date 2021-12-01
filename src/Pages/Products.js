@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Row, Col, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Card, Row, Col } from "react-bootstrap";
+
 
 export default function Products(props)  {
     return (
@@ -15,18 +15,6 @@ export default function Products(props)  {
                         This is a longer card with supporting text below as a natural
                         lead-in to additional content. This content is a little bit longer.
                     </Card.Text>
-                    {
-                        props.deleteItem
-                            ?
-                            <Button onClick={() => props.deleteItem(props.item.id)}className='bg-dark neonText border-light rounded'>Delete</Button>
-                    
-                            :
-                            <>
-                            
-                                <Link className="text-dark bi bi-bag-plus neonText" onClick={() => props.addToCart(props.item.id)} to='/cart' >Add To Cart</Link >&nbsp;
-                                Items Currently in cart: {props.cartNum}
-                            </>
-                    }
                     </Card.Body>
                 </Card>
                 </Col>
