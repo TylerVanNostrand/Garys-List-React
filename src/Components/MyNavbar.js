@@ -30,6 +30,9 @@ export default function MyNavbar(props) {
                 <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/cart">
                     Cart
                 </NavDropdown.Item>
+                <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/wishlist">
+                    Wishlist
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/login">
                     Login

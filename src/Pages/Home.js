@@ -11,9 +11,10 @@ export default function Home() {
                         <Card.Title>Welcome to Gary's List</Card.Title>
                          <Card.Text>
                             Your go to online store for all things Dungeons and Dragons.
+                            <br></br>
+                            Roll For Initiative!
                         </Card.Text>
-                        <Button as={Link} to='/about' variant="primary">About Us</Button>{' '}
-                        <Button as={Link} to='/products' variant="primary">Products</Button>
+                        <Button as={Link} to='/products' variant="primary" size="lg">Enter Site</Button>
                         </Card.Body>
                 </Card>
         </div>

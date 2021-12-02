@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
-
+import { Card, Row, Col, Button } from "react-bootstrap";
+// import { Link } from "react-router-dom";
 
 export default function Products(props)  {
     return (
@@ -15,6 +15,8 @@ export default function Products(props)  {
                         This is a longer card with supporting text below as a natural
                         lead-in to additional content. This content is a little bit longer.
                     </Card.Text>
+                    <Button variant="primary">Add to Cart</Button>{' '}
+                    <Button variant="primary">Add to Wishlist</Button>
                     </Card.Body>
                 </Card>
                 </Col>
