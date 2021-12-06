@@ -17,12 +17,12 @@ export default function MyNavbar(props) {
               <Nav.Link activeClassName={"active"} as={NavLink} to="/home">
                     Home
               </Nav.Link>
-              <Nav.Link activeClassName={"active"} as={NavLink} to="/forum">
-                    Forum
-              </Nav.Link>
               <Nav.Link activeClassName={"active"} as={NavLink} to="/about">
                     About
                   </Nav.Link>
+              <Nav.Link activeClassName={"active"} as={NavLink} to="/forum">
+                    Forum
+              </Nav.Link>
               <NavDropdown title="Menu" id="navbarScrollingDropdown">
                 <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/products">
                     Products

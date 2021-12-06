@@ -4,8 +4,8 @@ import { Card, Button } from 'react-bootstrap';
 
 export default function About() {
     return (
-    <div class="d-flex justify-content-center" >
-        <Card className="text-center">
+    <div class="d-flex justify-content-center container-fluid" >
+        <Card border="danger" className="text-center">
             <Card.Body>
             <Card.Title>Welcome to Gary's List</Card.Title>
                 <Card.Text>
