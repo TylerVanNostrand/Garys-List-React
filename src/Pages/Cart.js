@@ -1,19 +1,23 @@
 import React from 'react'
-//import { Link } from 'react-router-dom';
+import { Button, Card, Row, Col, Container } from 'react-bootstrap';
+
 
 
 function Cart({product, removeFromCart, index}) {
 
     return (
-        <div className="container border p-3">
-                <div>
-                </div>
-                <div className="fs-6 text-muted text-decoration-underline" onClick={() => removeFromCart(index)}>
-                   No Items in Cart
-                </div>
-                <div>
-            </div>
-        </div>
+    <Container>
+        <Row className="justify-content-center g-4">
+                <Col>        
+                    <Card>
+                    <Card.Body>
+                        
+                    </Card.Body>
+                    <Button variant="primary text-decoration-underline" onClick={() => removeFromCart(index)}>Remove From Cart</Button> 
+                    </Card>
+                </Col>
+        </Row>
+    </Container>
     )
 }
-export default Cart;
+    export default Cart;
