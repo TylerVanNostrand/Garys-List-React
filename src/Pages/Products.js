@@ -1,23 +1,29 @@
 import React from "react";
-import { Card, Row, Col, Button } from "react-bootstrap";
+import "../Products.css";
+import { Card, Row, Col, Button, Container } from "react-bootstrap";
 
 export default function Products({ products, addToCart, index })  {
     return (
-        <Row xm={4} sm={4} md={4} lg={4} className="justify-content-center g-4">
-            {Array.from({ length: 3 }).map((_, idx) => (
-                <Col>
-                <Card>
-                    <Card.Img variant="top" src={products} />
+    <Container>
+        <Row md={4} className="d-flex flex-row justify-content-center g-4">
+        {console.log(products)}
+            {products.map((prod, idx) => ( 
+                <Col md={4} className="d-flex flex-row justify-content-center g-4">
+                <Card className="h-100 w-100">
+                    <Card.Img className="myCard-img" variant="top" src={prod.image} />
+                    {console.log({prod : prod})}
                     <Card.Body>
-                    <Card.Title>Card title</Card.Title>
-                    <Card.Text>
+                    <Card.Title>{prod.title}</Card.Title>
+                    <Card.Text className="py-2">
+                        ${prod.price.toFixed(2)}
                     </Card.Text>
-                    <Button variant="primary" onClick={()=> addToCart(index)}>Add to Cart</Button>{' '}
+                    <Button variant="primary" onClick={()=> addToCart(idx)}>Add to Cart</Button>{' '}
                     <Button variant="primary">Add to Wishlist</Button>
                     </Card.Body>
                 </Card>
                 </Col>
             ))}
         </Row>
+    </Container>    
     );
 }

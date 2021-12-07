@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 
 export default function About() {
     return (
-    <div class="d-flex justify-content-center container-fluid" >
-        <Card border="danger" className="text-center">
+    <Container class="d-flex justify-content-center container-fluid" >
+        <Row className="justify-content-center">
+        <Col md={6} >
+        <Card border="danger" className="text-center border-5">
             <Card.Body>
             <Card.Title>Welcome to Gary's List</Card.Title>
                 <Card.Text>
@@ -16,7 +18,9 @@ export default function About() {
                 <Button as={Link} to='/login' variant="primary" size="lg">Sign Up</Button>
             </Card.Body>
         </Card>
-    </div>
+        </Col>
+        </Row>
+    </Container>
     )
 }
 

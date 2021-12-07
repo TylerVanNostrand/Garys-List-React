@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Container, Col, Row } from 'react-bootstrap';
 
 export default function Home() {
     return (
-        <div class="d-flex justify-content-center">
+        <Container class="d-flex justify-content-center">
+            <Row className="justify-content-center mt-5 pt-5">
+            <Col md={6} >
            <Card className="text-center">
                 <Card.Header>Hello Traveller</Card.Header>
                     <Card.Body>
@@ -17,6 +19,8 @@ export default function Home() {
                         <Button as={Link} to='/products' variant="primary" size="lg">Enter Site</Button>
                     </Card.Body>
                 </Card>
-        </div>
+                </Col>
+            </Row>
+        </Container>
     )
 }

@@ -1,23 +1,25 @@
 import React from 'react'
-import { Button, Card, Row, Col, Container } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
+import "../Cart.css";
 
 
-
-function Cart({product, removeFromCart, index}) {
+function Cart({products, removeFromCart, index}) {
 
     return (
-    <Container>
-        <Row className="justify-content-center g-4">
-                <Col>        
-                    <Card>
+        <Col md={4}>           
+                    <Card className='h-100 text-center'>
+                    <Card.Img className="myCart-img" variant="top" src={products?.image} />
+                    {/* {console.log({products : products})} */}
                     <Card.Body>
-                        
+                        {products?.title}
+                        {/* {console.log(products)} */}
+                    <div className="py-3">
+                    ${products?.price.toFixed(2)}    
+                    </div>  
                     </Card.Body>
                     <Button variant="primary text-decoration-underline" onClick={() => removeFromCart(index)}>Remove From Cart</Button> 
                     </Card>
-                </Col>
-        </Row>
-    </Container>
+        </Col>            
     )
 }
     export default Cart;

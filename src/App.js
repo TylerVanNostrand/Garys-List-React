@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Axios from "axios";
 import Home from "./Pages/Home";
 import Products from "./Pages/Products";
-import Cart from "./Pages/Cart";
+import CartPage from "./Components/CartPage";
 import Layout from "./Components/Layout";
 import Wishlist from "./Pages/Wishlist";
 import About from "./Pages/About";
@@ -15,7 +15,7 @@ import About from "./Pages/About";
 function App() {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
-    const [wishlist, setWishlist] = useState([]);
+    //const [wishlist, setWishlist] = useState([]);
 
   const axiosCall = () => {
     let apiUrl = `https://fakestoreapi.com/products`;
@@ -34,7 +34,7 @@ function App() {
       if (lSCart !== cart) {
         setCart(JSON.parse(lSCart));
       }
-    }, [])
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const updateCart = (cart) => {
     setCart(cart);
@@ -77,13 +77,17 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
 
-                    <Route path="products" element={<Products />} />
-
-                    <Route path="cart" element={<Cart   
-                        key={index}
-                        index={index}
+                    <Route path="products" element={
+                        
+                    <Products
                         products={products}
-                        removeFromCart={removeFromCart}/>} />
+                        addToCart={addToCart} />} />
+
+                    <Route path="cart" element={
+                        <CartPage 
+                        cart={cart}
+                        removeFromCart={removeFromCart}
+                        total={total} />} />
 
                     <Route path="wishlist" element={<Wishlist />} />
                     <Route path="/about" element={<About />} /> 
