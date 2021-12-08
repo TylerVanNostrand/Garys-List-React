@@ -1,12 +1,14 @@
 import React from "react";
-import { Navbar, Container, Nav, Button, NavDropdown, Form, FormControl } from "react-bootstrap";
+import { Navbar, Nav, Button, NavDropdown, Form, FormControl } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiceD20 } from '@fortawesome/free-solid-svg-icons'
 
 export default function MyNavbar(props) {
     return (
-        <Navbar sticky="top" className="myNav">
-        <Container className="myBorder border border-5 bg-white container-fluid">
-          <Navbar.Brand >Gary's List</Navbar.Brand>
+        
+        <Navbar className=" myNav myBorder border-bottom border-5 border-danger bg-white p-3 fw-bold  container-fluid" sticky="top">
+          <Navbar.Brand > <FontAwesomeIcon icon={faDiceD20} spin style={{color:'red'}} /> Gary's List</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -46,10 +48,9 @@ export default function MyNavbar(props) {
                 className="me-2"
                 aria-label="Search"
               />
-              <Button variant="outline-dark">Search</Button>
+              <Button variant="outline-dark border-2">Search</Button>
             </Form>
           </Navbar.Collapse>
-        </Container>
       </Navbar>
     );
 }

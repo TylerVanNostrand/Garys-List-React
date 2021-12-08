@@ -5,7 +5,7 @@ import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 export default function About() {
     return (
     <Container class="d-flex justify-content-center container-fluid" >
-        <Row className="justify-content-center">
+        <Row className="justify-content-center mt-5">
         <Col md={6} >
         <Card border="danger" className="text-center border-5">
             <Card.Body>

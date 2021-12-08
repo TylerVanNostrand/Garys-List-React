@@ -2,7 +2,7 @@ import React from "react";
 import "../Products.css";
 import { Card, Row, Col, Button, Container } from "react-bootstrap";
 
-export default function Products({ products, addToCart, index })  {
+export default function Products({ products, addToCart, index, addToWishlist })  {
     return (
     <Container>
         <Row md={4} className="d-flex flex-row justify-content-center g-4">
@@ -18,7 +18,7 @@ export default function Products({ products, addToCart, index })  {
                         ${prod.price.toFixed(2)}
                     </Card.Text>
                     <Button variant="primary" onClick={()=> addToCart(idx)}>Add to Cart</Button>{' '}
-                    <Button variant="primary">Add to Wishlist</Button>
+                    <Button variant="primary" onClick={()=> addToWishlist(idx)}>Add to Wishlist</Button>
                     </Card.Body>
                 </Card>
                 </Col>

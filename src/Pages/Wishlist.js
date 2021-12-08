@@ -1,19 +1,25 @@
 import React from 'react'
+import { Button, Card, Col } from 'react-bootstrap';
+import "../Cart.css";
 
 
-
-function Wishlist({product, removeFromWishlist, index}) {
+function Wishlist({products, removeFromWishlist, index}) {
 
     return (
-        <div className="container border p-3">
-                <div>
-                </div>
-                <div className="fs-6 text-muted text-decoration-underline" onClick={() => removeFromWishlist(index)}>
-                   No Items in Wishlist
-                </div>
-                <div>
-            </div>
-        </div>
+        <Col md={4}>           
+                    <Card className='h-100 text-center'>
+                    <Card.Img className="myCart-img" variant="top" src={products?.image} />
+                    {/* {console.log({products : products})} */}
+                    <Card.Body>
+                        {products?.title}
+                        {/* {console.log(products)} */}
+                    <div className="py-3">
+                        ${products?.price.toFixed(2)}    
+                    </div>  
+                    </Card.Body>
+                    <Button variant="primary text-decoration-underline" onClick={() => removeFromWishlist(index)}>Remove From Wishlist</Button> 
+                    </Card>
+        </Col>            
     )
 }
-export default Wishlist;
+    export default Wishlist;
