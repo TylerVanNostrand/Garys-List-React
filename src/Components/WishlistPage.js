@@ -5,12 +5,12 @@ import { Container, Row, Card } from "react-bootstrap";
 export default function WishlistPage({wishlist, removeFromWishlist, total}) {
     return (
        <Container>
-        <Row>
-        <Card>
+            <Row className="justify-content-center mt-5">
+            <Card border="danger" className="text-center border-5">
         <Container>
-        <Row>
-            
-        { wishlist !== null ?
+            <Row>
+                
+            { wishlist !== null ?
                     wishlist?.map((products, index) =>
                     <Wishlist   
                         key={index}
@@ -20,10 +20,10 @@ export default function WishlistPage({wishlist, removeFromWishlist, total}) {
                         : 'Your wishlist is empty'}
                         <div className="py-5"> Total: ${total()}</div>
 
-        </Row>
+            </Row>
         </Container>                
-        </Card>
-        </Row>
+            </Card>
+            </Row>
        </Container>
     )
 }

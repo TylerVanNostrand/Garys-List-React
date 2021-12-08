@@ -7,19 +7,19 @@ function Cart({products, removeFromCart, index}) {
 
     return (
         <Col md={4}>           
-                    <Card className='h-100 text-center'>
-                    <Card.Img className="myCart-img" variant="top" src={products?.image} />
+            <Card className='h-100 text-center'>
+                <Card.Img className="myCart-img" variant="top" src={products?.image} />
                     {/* {console.log({products : products})} */}
-                    <Card.Body>
-                        {products?.title}
-                        {/* {console.log(products)} */}
+                <Card.Body>
+                    {products?.title}
+                    {/* {console.log(products)} */}
                     <div className="py-3">
                     ${products?.price.toFixed(2)}    
                     </div>  
-                    </Card.Body>
+                </Card.Body>
                     <Button variant="primary text-decoration-underline" onClick={() => removeFromCart(index)}>Remove From Cart</Button> 
-                    </Card>
+            </Card>
         </Col>            
     )
 }
-    export default Cart;
+export default Cart;

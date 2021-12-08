@@ -4,14 +4,14 @@ import { Card, Row, Col, Button, Container } from "react-bootstrap";
 
 export default function Products({ products, addToCart, index, addToWishlist })  {
     return (
-    <Container>
-        <Row md={4} className="d-flex flex-row justify-content-center g-4">
-        {console.log(products)}
-            {products.map((prod, idx) => ( 
+        <Container>
+            <Row md={4} className="d-flex flex-row justify-content-center g-4 mt-5">
+                {/* {console.log(products)} */}
+                {products.map((prod, idx) => ( 
                 <Col md={4} className="d-flex flex-row justify-content-center g-4">
                 <Card className="h-100 w-100">
                     <Card.Img className="myCard-img" variant="top" src={prod.image} />
-                    {console.log({prod : prod})}
+                        {/* {console.log({prod : prod})} */}
                     <Card.Body>
                     <Card.Title>{prod.title}</Card.Title>
                     <Card.Text className="py-2">
@@ -22,8 +22,8 @@ export default function Products({ products, addToCart, index, addToWishlist }) 
                     </Card.Body>
                 </Card>
                 </Col>
-            ))}
-        </Row>
-    </Container>    
+                ))}
+            </Row>
+        </Container>    
     );
 }
