@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav, Button, NavDropdown, Form, FormControl } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiceD20 } from '@fortawesome/free-solid-svg-icons'
+import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 
 export default function MyNavbar(props) {
     return (

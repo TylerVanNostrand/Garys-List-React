@@ -17,7 +17,7 @@ function Wishlist({products, removeFromWishlist, index}) {
                    ${products?.price.toFixed(2)}    
                     </div>  
                 </Card.Body>
-                    <Button variant="primary text-decoration-underline" onClick={() => removeFromWishlist(index)}>Remove From Wishlist</Button> 
+                    <Button variant="dark text-decoration-underline" onClick={() => removeFromWishlist(index)}>Remove From Wishlist</Button> 
             </Card>
         </Col>            
     )

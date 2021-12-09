@@ -6,7 +6,8 @@ export default function WishlistPage({wishlist, removeFromWishlist, total}) {
     return (
        <Container>
             <Row className="justify-content-center mt-5">
-            <Card border="danger" className="text-center border-5">
+            <Card border="dark" className="text-center border-5">
+            <Card.Header>Your Wishlist</Card.Header>
         <Container>
             <Row>
                 

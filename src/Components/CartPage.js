@@ -7,6 +7,7 @@ export default function CartPage({cart, removeFromCart, total}) {
        <Container>
             <Row className="justify-content-center mt-5">
             <Card border="danger" className="text-center border-5">
+            <Card.Header>Your Cart</Card.Header>
         <Container>
             <Row>
             

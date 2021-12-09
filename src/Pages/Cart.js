@@ -17,7 +17,7 @@ function Cart({products, removeFromCart, index}) {
                     ${products?.price.toFixed(2)}    
                     </div>  
                 </Card.Body>
-                    <Button variant="primary text-decoration-underline" onClick={() => removeFromCart(index)}>Remove From Cart</Button> 
+                    <Button variant="danger text-decoration-underline" onClick={() => removeFromCart(index)}>Remove From Cart</Button> 
             </Card>
         </Col>            
     )

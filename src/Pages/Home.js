@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Card, Button, Container, Col, Row } from 'react-bootstrap';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
     return (
@@ -16,8 +18,11 @@ export default function Home() {
                             Your go to online store for all things Dungeons and Dragons.
                             <br></br>
                             Roll For Initiative!
+                            <br></br>
+                            <br></br>
+                            <FontAwesomeIcon icon={faDiceD20} size="4x"  style={{color:'red'}}></FontAwesomeIcon>
                         </Card.Text>
-                        <Button as={Link} to='/products' variant="primary" size="lg">Enter Site</Button>
+                        <Button as={Link} to='/products' variant="dark" size="lg">Enter Site</Button>
                         </Card.Body>
                 </Card>
             </Col>
