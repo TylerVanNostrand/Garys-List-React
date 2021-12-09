@@ -6,8 +6,8 @@ export default function WishlistPage({wishlist, removeFromWishlist, total}) {
     return (
        <Container>
             <Row className="justify-content-center mt-5">
-            <Card border="dark" className="text-center border-5">
-            <Card.Header>Your Wishlist</Card.Header>
+            <Card border="dark" className="text-center border-5 px-0">
+            <Card.Header className=" fs-3 fw-bold">Your Wishlist</Card.Header>
         <Container>
             <Row>
                 
@@ -19,7 +19,7 @@ export default function WishlistPage({wishlist, removeFromWishlist, total}) {
                         products={products}
                         removeFromWishlist={removeFromWishlist}/>)
                         : 'Your wishlist is empty'}
-                        <div className="py-5"> Total: ${total()}</div>
+                        <div className="py-5 fs-2 fw-bold"> Total: ${total()}</div>
 
             </Row>
         </Container>                

@@ -6,8 +6,8 @@ export default function CartPage({cart, removeFromCart, total}) {
     return (
        <Container>
             <Row className="justify-content-center mt-5">
-            <Card border="danger" className="text-center border-5">
-            <Card.Header>Your Cart</Card.Header>
+            <Card border="danger" className="text-center border-5 px-0">
+            <Card.Header className=" fs-3 fw-bold">Your Cart</Card.Header>
         <Container>
             <Row>
             
@@ -19,7 +19,7 @@ export default function CartPage({cart, removeFromCart, total}) {
                     products={products}
                     removeFromCart={removeFromCart}/>)
                     : 'Your cart is empty'}
-                    <div className="py-5"> Total: ${total()}</div>
+                    <div className="py-5 fs-2 fw-bold"> Total: ${total()}</div>
 
             </Row>
         </Container>                

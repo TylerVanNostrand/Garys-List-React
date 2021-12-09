@@ -1,5 +1,13 @@
-.myCart-img {
+.myCard-img {
     align-self: center;
-    height: 200px;
-    width: 200px;
+
+    max-width: inherit;
+    height: auto;
+}
+.myBody {
+    flex: 1 1 auto;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -8,13 +8,13 @@ export default function Products({ products, addToCart, index, addToWishlist }) 
             <Row md={4} className="d-flex flex-row justify-content-center g-4 mt-5">
                 {/* {console.log(products)} */}
                 {products.map((prod, idx) => ( 
-                <Col md={4} className="d-flex flex-row justify-content-center g-4">
+                <Col md={4} className="myProduct d-flex flex-row justify-content-center g-4">
                 <Card className="h-100 w-100 border-danger border-bottom border-3 fw-bold">
-                    <Card.Img className="myCard-img" variant="top" src={prod.image} />
+                    <Card.Img className="myCard-img p-2" variant="top" src={prod.image} />
                         {/* {console.log({prod : prod})} */}
-                    <Card.Body>
-                    <Card.Title>{prod.title}</Card.Title>
-                    <Card.Text className="py-2">
+                    <Card.Body className="myBody">
+                    <Card.Title className="fw-bold">{prod.title}</Card.Title>
+                    <Card.Text className="py-2 fs-3 fw-bold">
                         ${prod.price.toFixed(2)}
                     </Card.Text>
                     <Button variant="danger" onClick={()=> addToCart(idx)}>Add to Cart</Button>{' '}

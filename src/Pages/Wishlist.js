@@ -6,9 +6,9 @@ import "../Cart.css";
 function Wishlist({products, removeFromWishlist, index}) {
 
     return (
-        <Col md={4}>           
-            <Card className='h-100 text-center'>
-                <Card.Img className="myCart-img" variant="top" src={products?.image} />
+        <Col className="pt-3" md={4}>           
+            <Card className='h-100 text-center shadow'>
+                <Card.Img className="myCart-img p-2" variant="top" src={products?.image} />
                     {/* {console.log({products : products})} */}
                 <Card.Body>
                     {products?.title}
