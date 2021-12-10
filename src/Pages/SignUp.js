@@ -70,7 +70,7 @@ export default function SignUp() {
 
                     <Button variant="danger" type="submit">
                       Submit
-                                        </Button>
+                    </Button>
                   </Form>
                 </Col>
               </Row>

@@ -3,7 +3,7 @@ import { Button, Card, Col } from 'react-bootstrap';
 import "../Cart.css";
 
 
-function Cart({ products, removeFromCart, index }) {
+function Cart({ products, removeFromCart, addToWishlist, index }) {
 
   return (
     <Col className="pt-3" md={4}>
@@ -17,7 +17,9 @@ function Cart({ products, removeFromCart, index }) {
             ${products?.price.toFixed(2)}
           </div>
         </Card.Body>
-        <Button variant="danger text-decoration-underline" onClick={() => removeFromCart(index)}>Remove From Cart</Button>
+        <Button variant="danger text-decoration-underline" onClick={() => removeFromCart(index)}>Remove From Cart</Button> {' '}
+        <Button variant="dark text-decoration-underline" onClick={() => addToWishlist(index)}>Add to Wishlist</Button>
+
       </Card>
     </Col>
   )

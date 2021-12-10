@@ -2,7 +2,7 @@ import React from 'react';
 import Wishlist from "../Pages/Wishlist";
 import { Container, Row, Card } from "react-bootstrap";
 
-export default function WishlistPage({ wishlist, removeFromWishlist, total }) {
+export default function WishlistPage({ wishlist, removeFromWishlist, addToCart, total }) {
   return (
     <Container>
       <Row className="justify-content-center mt-5">
@@ -17,6 +17,7 @@ export default function WishlistPage({ wishlist, removeFromWishlist, total }) {
                     key={index}
                     index={index}
                     products={products}
+                    addToCart={addToCart}
                     removeFromWishlist={removeFromWishlist} />)
                 : 'Your wishlist is empty'}
               <div className="py-5 fs-2 fw-bold"> Total: ${total()}</div>

@@ -132,12 +132,14 @@ function App() {
             <CartPage
               cart={cart}
               removeFromCart={removeFromCart}
+              addToWishlist={addToWishlist}
               total={total} />} />
 
           <Route path="wishlist" element={
             <WishlistPage
               wishlist={wishlist}
               removeFromWishlist={removeFromWishlist}
+              addToCart={addToCart}
               total={totalWishlist} />} />
 
           <Route path="/about" element={<About />} />

@@ -2,7 +2,7 @@ import React from 'react';
 import Cart from "../Pages/Cart";
 import { Container, Row, Card } from "react-bootstrap";
 
-export default function CartPage({ cart, removeFromCart, total }) {
+export default function CartPage({ cart, removeFromCart, addToWishlist, total }) {
   return (
     <Container>
       <Row className="justify-content-center mt-5">
@@ -17,6 +17,7 @@ export default function CartPage({ cart, removeFromCart, total }) {
                     key={index}
                     index={index}
                     products={products}
+                    addToWishlist={addToWishlist}
                     removeFromCart={removeFromCart} />)
                 : 'Your cart is empty'}
               <div className="py-5 fs-2 fw-bold"> Total: ${total()}</div>
