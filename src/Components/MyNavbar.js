@@ -1,13 +1,15 @@
 import React from "react";
-import { Navbar, Nav, Button, NavDropdown, Form, FormControl } from "react-bootstrap";
+import { Navbar, Nav, Button, NavDropdown, Form, FormControl, Container } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 
-export default function MyNavbar(props) {
+export default function MyNavbar() {
     return (
-        <Navbar className=" myNav myBorder border-bottom border-5 border-danger bg-white p-3 fw-bold  container-fluid" sticky="top">
-            <Navbar.Brand className={"active"} as={NavLink} to="/home" > <FontAwesomeIcon icon={faDiceD20} spin style={{color:'red'}} /> Gary's List</Navbar.Brand>
+        <Navbar className=" myNav myBorder border-bottom border-5 border-danger bg-white p-3 fw-bold" sticky="top" expand="lg">
+            <Container fluid>
+            <Navbar.Brand className={"active"} as={NavLink} to="/home" >
+                 <FontAwesomeIcon icon={faDiceD20} spin style={{color:'red'}} /> Gary's List</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
                 <Nav
@@ -24,16 +26,19 @@ export default function MyNavbar(props) {
                 <Nav.Link activeClassName={"active"} as={NavLink} to="/wishlist">
                         Wishlist
                     </Nav.Link>
-                <NavDropdown title="Menu" id="navbarScrollingDropdown">
+                <NavDropdown className="fw-bold" title="Menu" id="navbarScrollingDropdown">
                     <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/about">
                         About
                     </NavDropdown.Item>
-                    <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/forum">
-                        Forums
+                    <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/newplayer">
+                        New to DnD
                     </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/login">
                         Login
+                    </NavDropdown.Item>
+                    <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/signup">
+                        Sign Up
                     </NavDropdown.Item>
                     </NavDropdown>
                 </Nav>
@@ -47,6 +52,7 @@ export default function MyNavbar(props) {
                     <Button variant="outline-dark border-2">Search</Button>
                     </Form>
                 </Navbar.Collapse>
+            </Container>
         </Navbar>
     );
 }

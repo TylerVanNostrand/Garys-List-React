@@ -11,7 +11,7 @@ export default function Products({ products, addToCart, index, addToWishlist }) 
                 <Col md={4} className="myProduct d-flex flex-row justify-content-center g-4">
                 <Card className="h-100 w-100 border-danger border-bottom border-3 fw-bold">
                     <Card.Img className="myCard-img p-2" variant="top" src={prod.image} />
-                        {/* {console.log({prod : prod})} */}
+                        {console.log({prod : prod})}
                     <Card.Body className="myBody">
                     <Card.Title className="fw-bold">{prod.title}</Card.Title>
                     <Card.Text className="py-2 fs-3 fw-bold">

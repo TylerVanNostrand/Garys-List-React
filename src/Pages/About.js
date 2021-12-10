@@ -14,14 +14,20 @@ export default function About() {
                         <Card.Title className="fs-2">Welcome to Gary's List</Card.Title>
                         <FontAwesomeIcon icon={faDiceD20} size="4x"  style={{color:'red'}}></FontAwesomeIcon>
                             <Card.Text className="p-2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices erat lorem, rhoncus condimentum turpis dapibus sed. Vestibulum sollicitudin vel nulla at rhoncus.
-                                 Integer ut efficitur nibh. Nunc facilisis lacus neque, mollis ornare augue finibus vitae. Vivamus dignissim risus sem, eu venenatis lorem iaculis eu. Nunc mollis odio in 
-                                 nisi mollis, ac tristique justo ullamcorper. Sed tempor facilisis laoreet. Donec et lorem congue tellus viverra condimentum sit amet consequat turpis. Phasellus efficitur
-                                  ex ut consequat consectetur. Pellentesque sed mauris ac nunc tristique suscipit. Vestibulum feugiat purus id ultrices lobortis.
-                                Vestibulum volutpat rhoncus mi, ac tempus diam convallis nec. Integer mattis dui quis est aliquet efficitur.Quisque elementum nisl ac nulla dictum, quis placerat mauris
-                                 malesuada. Phasellus ultricies nulla fermentum nisl cursus, eu efficitur ex laoreet. Proin et est accumsan, fringilla lacus ac, convallis augue. Aenean tempus vulputate 
-                                 quam, at dignissim libero ultrices eu. Aliquam vulputate dignissim scelerisque. Proin vel arcu ex. Donec ut erat sit amet nulla laoreet blandit. Lorem ipsum dolor sit amet, 
-                                 consectetur adipiscing elit. Nulla facilisi. Integer sem arcu, pellentesque ac leo interdum, tincidunt pretium magna. Quisque eu blandit massa, quis pretium leo.
+                                We’re sure your first question is: “What is Gary’s List and why is it called that?”.
+                            Gary’s List is your go to website for all items Dungeons and Dragons. We have everything
+                            a new or experienced player could ever need.  From homemade dice, miniatures, paints, maps,
+                            books, and adventure paths, to those hard to find early edition comics or books. We 
+                            welcome new players, old players, casual, hardcore, Dungeon Masters, party members, 
+                            and even those that don’t play but love the game anyway! If we don’t have it then we 
+                            will do our best to search it out and find it. 
+                                   <br></br>
+                                   <br></br>
+	                            Now your second question: “Why is it called Gary’s List?”. Well as you’ll find out 
+                            in our New Players section, the main founder of Dungeons and Dragons name is 
+                            Gary Gygax (now <b>THAT</b> is a fantasy name). We here at Gary’s List are nerds to our core 
+                            and welcome any and all who wish to visit our site. Stay a while and see all that we 
+                            have to offer.
                             </Card.Text>
                             <Button as={Link} to='/products' variant="dark" size="lg">Enter Site</Button>{' '}
                             <Button as={Link} to='/signup' variant="dark" size="lg">Sign Up</Button>
