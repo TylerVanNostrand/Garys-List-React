@@ -15,9 +15,9 @@ import NewPlayer from "./Pages/NewPlayer";
 
 
 function App() {
-    const [products, setProducts] = useState([]);
-    const [cart, setCart] = useState([]);
-    const [wishlist, setWishlist] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
 
   const axiosCall = () => {
     let apiUrl = `https://fakestoreapi.com/products`;
@@ -31,21 +31,21 @@ function App() {
 
   useEffect(axiosCall, []);
 
-      useEffect(() => {
-      let lSCart = window.localStorage.getItem('cart');
-      if (lSCart !== cart) {
-        setCart(JSON.parse(lSCart));
-      }
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    let lSCart = window.localStorage.getItem('cart');
+    if (lSCart !== cart) {
+      setCart(JSON.parse(lSCart));
+    }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-    useEffect(axiosCall, []);
+  useEffect(axiosCall, []);
 
-    useEffect(() => {
+  useEffect(() => {
     let lSWishlist = window.localStorage.getItem('wishlist');
     if (lSWishlist !== wishlist) {
       setCart(JSON.parse(lSWishlist));
     }
-    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const updateCart = (cart) => {
     setCart(cart);
@@ -61,7 +61,7 @@ function App() {
 
   const addToCart = (index) => {
     // console.log(cart);
-     let temp = [];
+    let temp = [];
     if (cart !== null) {
       temp = [...cart]
     }
@@ -73,7 +73,7 @@ function App() {
 
   const addToWishlist = (index) => {
     // console.log(cart);
-     let temp = [];
+    let temp = [];
     if (wishlist !== null) {
       temp = [...wishlist]
     }
@@ -115,45 +115,45 @@ function App() {
     }
   }
 
-    return (
-        <>
-            {/* <MyNavbar /> */}
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
+  return (
+    <>
+      {/* <MyNavbar /> */}
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
 
-                    <Route path="products" element={    
-                    <Products
-                        products={products}
-                        addToCart={addToCart}
-                        addToWishlist={addToWishlist} />} />
+          <Route path="products" element={
+            <Products
+              products={products}
+              addToCart={addToCart}
+              addToWishlist={addToWishlist} />} />
 
-                    <Route path="cart" element={
-                    <CartPage 
-                        cart={cart}
-                        removeFromCart={removeFromCart}
-                        total={total} />} />
+          <Route path="cart" element={
+            <CartPage
+              cart={cart}
+              removeFromCart={removeFromCart}
+              total={total} />} />
 
-                    <Route path="wishlist" element={
-                    <WishlistPage
-                        wishlist={wishlist}
-                        removeFromWishlist={removeFromWishlist}
-                        total={totalWishlist} />} />
+          <Route path="wishlist" element={
+            <WishlistPage
+              wishlist={wishlist}
+              removeFromWishlist={removeFromWishlist}
+              total={totalWishlist} />} />
 
-                    <Route path="/about" element={<About />} /> 
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/signup" element={<SignUp />} />
-                    <Route path="/newplayer" element={<NewPlayer />} />
-                    <Route path="*" element={<Home />} />
-                    {/* <Route path"/forum" element={<Forum />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/newplayer" element={<NewPlayer />} />
+          <Route path="*" element={<Home />} />
+          {/* <Route path"/forum" element={<Forum />} />
                     {/* Using path="*"" means "match anything", so this route
                     acts like a catch-all for URLs that we don't have explicit
                     routes for. */}
-                </Route>
-            </Routes>
+        </Route>
+      </Routes>
 
 
-        </>
-    );
+    </>
+  );
 }
 export default App;

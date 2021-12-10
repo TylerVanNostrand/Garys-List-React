@@ -6,7 +6,7 @@ export default function Footer() {
     <Container>
       <Row className="row-1">
         <Col className="text-center">
-            
+
         </Col>
       </Row>
     </Container>
