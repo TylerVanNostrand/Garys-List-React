@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+Gary's List is an online ecommerce store with a Dungeons and Dragons theme. It is currently only on it's second iteration.
+The first two iterations were completed in two, one week sprints. I plan to continue to add features to the website
+as time goes on. You can visit the live version of it here -> https://garys-list.web.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

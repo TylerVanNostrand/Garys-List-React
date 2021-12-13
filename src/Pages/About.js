@@ -30,7 +30,7 @@ export default function About() {
                             have to offer.
                             </Card.Text>
               <Button as={Link} to='/products' variant="dark" size="lg">Enter Site</Button>{' '}
-              <Button as={Link} to='/signup' variant="dark" size="lg">Sign Up</Button>
+              {/* <Button as={Link} to='/signup' variant="dark" size="lg">Sign Up</Button> */}
             </Card.Body>
           </Card>
         </Col>

@@ -34,12 +34,12 @@ export default function MyNavbar() {
                 New to DnD
                     </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/login">
+              {/* <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/login">
                 Login
                     </NavDropdown.Item>
               <NavDropdown.Item activeClassName={"active"} as={NavLink} to="/signup">
                 Sign Up
-                    </NavDropdown.Item>
+                    </NavDropdown.Item> */}
             </NavDropdown>
           </Nav>
           {/* <Form className="d-flex">

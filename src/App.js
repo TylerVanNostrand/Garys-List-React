@@ -8,9 +8,9 @@ import CartPage from "./Components/CartPage";
 import Layout from "./Components/Layout";
 import WishlistPage from "./Components/WishlistPage";
 import About from "./Pages/About";
-import Login from "./Pages/Login";
-import SignUp from "./Pages/SignUp";
 import NewPlayer from "./Pages/NewPlayer";
+// import Login from "./Pages/Login";
+// import SignUp from "./Pages/SignUp";
 //import Forum from "./Pages/Forum";
 
 
@@ -143,11 +143,11 @@ function App() {
               total={totalWishlist} />} />
 
           <Route path="/about" element={<About />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
           <Route path="/newplayer" element={<NewPlayer />} />
           <Route path="*" element={<Home />} />
           {/* <Route path"/forum" element={<Forum />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
                     {/* Using path="*"" means "match anything", so this route
                     acts like a catch-all for URLs that we don't have explicit
                     routes for. */}
