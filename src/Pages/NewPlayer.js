@@ -14,14 +14,14 @@ export default function NewPlayer() {
                         <Card.Title className="fs-2">Are you new to Dungeons and Dragons?</Card.Title>
                         <FontAwesomeIcon icon={faDiceD20} size="4x"  style={{color:'black'}}></FontAwesomeIcon>
                             <Card.Text className="p-2">
-                                If you answered <b>yes</b> to the above question, then you’re in the right place! Welcome traveller to a website dedicated
-                            to all things Dungeons and Dragons. I’m sure you’re full of questions. What is Dnd? Why do we use dice? How do I create
+                                If you answered <b>yes</b> to the above question, then you’re in the right place! Welcome, traveller, to a website dedicated
+                            to all things Dungeons and Dragons. I’m sure you’re full of questions. What is DnD? Why do we use dice? How do I create
                             a character? Which edition is the best? How can I learn the rules? What do I do if I don’t have any friends who want to
                             play? Where do I even start? Don’t worry, these are all questions even the most experienced players have asked themselves 
                             at one point. We hope that we can answer a few of them for you.
                             <br></br>
                             <br></br>
-                                First: What is Dungeons and Dragons? Dungeons & Dragons (commonly abbreviated as D&D or DnD) is a fantasy tabletop 
+                                First: What is Dungeons and Dragons? Dungeons and Dragons (commonly abbreviated as D&D or DnD) is a fantasy tabletop 
                             role-playing game (RPG) originally designed by <i>Gary Gygax</i> and <i>Dave Arneson</i>. It was first published in 1974 by 
                             Tactical Studies Rules, Inc. It has been published by Wizards of the Coast (now a subsidiary of Hasbro) since 1997. 
                             The game was derived from miniature wargames, with a variation of the 1971 game Chainmail serving as the initial rule 
@@ -34,14 +34,14 @@ export default function NewPlayer() {
                             favorites are: <i>The Adventure Zone, Critical Role, Not Another DnD Podcast, and Dragon Friends</i>. Maybe you don’t want 
                             to listen to a podcast? <i>Critical Role</i> has an excellent series on YouTube that is very highly rated and has a high 
                             production value. Still not what you’re looking for? You can always start with the <b>Players Handbook</b>. 
-                            This is a handy (pun intended) guide/rule book for every player. It will break down and explain the rules of the game. 
-                            Along with detailed explanations of the race, classes, skills, and many of the common items you will come across in 
+                            This is a handy (pun intended) guide/rule book for every player. It will break down and explain the rules of the game, 
+                            along with detailed explanations of the races, classes, skills, and many of the common items you will come across in 
                             the game.
                             <br></br>
                             <br></br>
                                 Now that you have hopefully picked a place to get started, all of us here at Gary’s List welcome you to the amazing 
                                 world of Dungeons and Dragons. We hope you develop a love for the game and all that it encompasses! If you ever have
-                                 any questions or need any help,  be sure to visit our forums! Now, our story begins in a homely tavern…
+                                any questions or need any help,  be sure to visit our forums! Now, our story begins in a homely tavern…
                             </Card.Text>
                             <Button as={Link} to='/products' variant="danger" size="lg">Back to Site</Button>{' '}
                     </Card.Body>
